@@ -17,7 +17,7 @@ impl<T: Currency> Account<T> {
         return format!("{}: {}", self.name, self.balance.amount());
     }
     pub fn add(&mut self, amount: u64 ){
-        self.balance.
+        self.balance.add(amount);
     }
 }
 
