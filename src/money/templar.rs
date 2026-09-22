@@ -1,4 +1,4 @@
-use crate::currency::Currency;
+use crate::money::currency::Currency;
 
 pub struct Templar {
     amount: u64,

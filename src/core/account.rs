@@ -1,4 +1,4 @@
-use crate::accounting::user::User;
+use crate::core::user::User;
 use crate::money::currency::Currency;
 
 
