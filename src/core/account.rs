@@ -1,16 +1,21 @@
-use crate::templar::Templar;
-use crate::currency::Currency;
+use crate::accounting::user::User;
+use crate::money::currency::Currency;
+
 
 pub struct Account<T: Currency> {
     name: String,
     balance: T,
+    id: u64,
+    user_id: u64
 }
 
 impl<T: Currency> Account<T> {
-    pub fn new(name: String) -> Account<T> {
+    pub fn new(name: String, user: &User) -> Account<T> {
         return Account {
             name,
             balance: Currency::zero(),
+            id: 0,
+            user_id:user.id()
         };
     }
     pub fn statement(&self) -> String {
